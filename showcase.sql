@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Aug 22, 2022 at 05:42 AM
+-- Generation Time: Aug 30, 2022 at 03:36 AM
 -- Server version: 10.4.24-MariaDB
 -- PHP Version: 7.4.29
 
@@ -24,6 +24,25 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
+-- Table structure for table `admin`
+--
+
+CREATE TABLE `admin` (
+  `id` int(11) NOT NULL,
+  `username` varchar(40) NOT NULL,
+  `password` varchar(40) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `admin`
+--
+
+INSERT INTO `admin` (`id`, `username`, `password`) VALUES
+(1, 'admin', 'himakom22');
+
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `author`
 --
 
@@ -40,7 +59,7 @@ CREATE TABLE `author` (
 --
 
 INSERT INTO `author` (`id_author`, `npm`, `nama`, `angkatan`, `programStudi`) VALUES
-(1, 2117051066, 'muzaki', '2021', 'Ilmu Komputer');
+(16, 2117051066, 'Faiz Muzaki', '2021', 'Ilmu komputer');
 
 -- --------------------------------------------------------
 
@@ -63,17 +82,17 @@ CREATE TABLE `project` (
 --
 
 INSERT INTO `project` (`id`, `judul`, `projectThumbnail`, `projectVideo`, `githubUrl`, `projectDescription`, `author`) VALUES
-(3, 'aplikasi djaya', 'img/djaya.png', 'https://www.youtube.com/embed/hVKwS9x8Nn4', 'https://github.com/faizmuzaki/showcase', 'Pagination is the process of separating print or digital content into discrete pages. For print documents and some online content, pagination also refers to the automated process of adding consecutive numbers to identify the sequential order of pages.', 1),
-(4, 'testtt', 'img/djaya.png', 'https://www.youtube.com/embed/hVKwS9x8Nn4', 'github.com', 'test', 1),
-(5, 'testtt', 'img/djaya.png', 'https://www.youtube.com/embed/hVKwS9x8Nn4', 'github.com', 'test', 1),
-(6, 'testtt', 'img/djaya.png', 'https://www.youtube.com/embed/hVKwS9x8Nn4', 'github.com', 'test', 1),
-(7, 'testtt', 'img/djaya.png', 'https://www.youtube.com/embed/hVKwS9x8Nn4', 'github.com', 'test', 1),
-(8, 'testtt', 'img/djaya.png', 'https://www.youtube.com/embed/hVKwS9x8Nn4', 'github.com', 'test', 1),
-(9, 'testtt', 'img/djaya.png', 'https://www.youtube.com/embed/hVKwS9x8Nn4', 'github.com', 'test', 1);
+(45, 'djaya djaya', 'https://avatars.githubusercontent.com/u/34159640', 'https://www.youtube.com/embed/hVKwS9x8Nn4', 'https://github.com/faizmuzaki', 'Pagination is the process of separating print or digital content into discrete pages. For print documents and some online content, pagination also refers to the automated process of adding consecutive numbers to identify the sequential order of pages.', 16);
 
 --
 -- Indexes for dumped tables
 --
+
+--
+-- Indexes for table `admin`
+--
+ALTER TABLE `admin`
+  ADD PRIMARY KEY (`id`);
 
 --
 -- Indexes for table `author`
@@ -93,16 +112,22 @@ ALTER TABLE `project`
 --
 
 --
+-- AUTO_INCREMENT for table `admin`
+--
+ALTER TABLE `admin`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+
+--
 -- AUTO_INCREMENT for table `author`
 --
 ALTER TABLE `author`
-  MODIFY `id_author` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id_author` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=17;
 
 --
 -- AUTO_INCREMENT for table `project`
 --
 ALTER TABLE `project`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=47;
 
 --
 -- Constraints for dumped tables
